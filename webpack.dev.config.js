@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -26,6 +27,10 @@ module.exports = {
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new HTMLWebpackPlugin({
+            template: 'dist/index.html',
+            inject: true
+        }),
     ]
 };
