@@ -1,4 +1,4 @@
-import { EXAMPLE_ACTION } from '../constants/MainActionTypes';
+import { EXAMPLE_ACTION } from './ExampleConstants';
 
 const initialState = {
 }
